@@ -30,7 +30,7 @@ class Header extends Component {
     return(
       <nav className="navbar navbar-light">
         <Link to="/" className="navbar-brand">Redux Auth</Link>
-        <ul clasName="nav navbar-nav">
+        <ul clasName="list-unstyled">
           {this.renderLinks()}
         </ul>
       </nav>
@@ -44,4 +44,4 @@ function mapStateToProps(state) {
   )
 }
 
-export default connect()(Header)
+export default connect(mapStateToProps)(Header)  // mapStateToProps
